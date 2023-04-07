@@ -1,7 +1,7 @@
 ---
 title: "Start Hugao"
 title: "开始胡搞"
-summary: "不管是不是胡搞，只要开搞了就会有成果"
+summary: "不管是不是胡搞，只要开搞了就会有成果;一直是草稿，胡搞到底！"
 date: 2023-04-07T11:31:49+08:00
 lastmod: 2023-04-07T11:31:49+08:00
 categories:
@@ -10,7 +10,7 @@ comments: true
 showtoc: true
 searchHidden: false
 hidemeta: false
-draft: true
+draft: false
 weight:
 cover:
     image: "cover.webp"
@@ -318,4 +318,28 @@ hugo server -D
 ```
 open https://github.com/new
 git remote add origin git@github.com:etng/hugao.git
+```
+
+https://pages.dev/
+
+framework hugo
+HUGO_VERSION	0.111.3
+
+Add the following CNAME record:
+
+Name
+make
+Click to copy
+Target
+hugao.pages.dev
+Click to copy
+
+
+```
+# 克隆 Git 子模块
+cd Blog && git submodule update --init --recursive
+# 启动 Hugo 预览服务器
+hugo server -D
+# 更新主题
+git submodule update --remote --merge
 ```
