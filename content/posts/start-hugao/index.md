@@ -72,14 +72,14 @@ minify:
 params:
   env: production
   # 网站标题
-  title: 'Hugo Start'
+  title: '胡搞'
   # 网站描述
-  description: 'Hugo Start with PaperMod'
+  description: '胡搞 用了PaperMod我骄傲了吗？'
   # 网站关键词（大部分搜索引擎已放弃，可注释掉）
   # keywords: [Blog, Portfolio, PaperMod]
 
   # 网站作者
-  author: 'Your Name'
+  author: '胡高'
   # 多个作者写法
   # author: ["Me", "You"]
 
@@ -135,7 +135,7 @@ params:
 
   label:
     # 使用文本替代 Logo 标签
-    text: 'Hugo Start'
+    text: '胡搞'
     # 网站 Logo 图片（/static 下面的文件名称）
     icon: /apple-touch-icon.png
     # 图标高度
@@ -160,7 +160,7 @@ params:
   # 主页 - 信息模式（默认）
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to hugo start, this is a example of Hugo and PaperMod
+    Content: Welcome to 胡搞, this is a example of Hugo and PaperMod
 
   #  主页 - 信息模式 图标展示
   socialIcons:
@@ -169,9 +169,7 @@ params:
     # - name: stackoverflow
     #   url: "https://stackoverflow.com"
     - name: github
-      url: 'https://github.com/DejavuMoe/hugo-start'
-    - name: mastodon
-      url: 'https://sink.love/@dejavu'
+      url: 'https://github.com/etng/hugao'
 
   # 站长验证
   analytics:
@@ -190,7 +188,7 @@ params:
 
   # 关联编辑
   editPost:
-    URL: 'https://github.com/DejavuMoe/hugo-start/edit/master/content/posts'
+    URL: 'https://github.com/etng/hugao/edit/master/content/posts'
     Text: 'Edit on GitHub' # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -222,7 +220,7 @@ menu:
       weight: 20
     - identifier: '仓库'
       name: '仓库'
-      url: https://github.com/DejavuMoe/hugo-start
+      url: https://github.com/etng/hugao
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -308,6 +306,13 @@ EOT
 ```
 
 ```
+cat<<'EOT'>readme.md
+# 胡搞博客，欢迎投稿
+# 偶有收获，定属意外
+EOT
+```
+
+```
 hugo sever
 
 # 带上 -D 参数可以预览草稿
@@ -342,4 +347,9 @@ cd Blog && git submodule update --init --recursive
 hugo server -D
 # 更新主题
 git submodule update --remote --merge
+```
+
+```
+mkdir -p layouts/partials
+cp themes/PaperMod/layouts/partials/footer.html layouts/partials 
 ```
